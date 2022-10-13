@@ -199,6 +199,7 @@ def add_product_to_cart():
 @app.route('/cart')
 def cart():
     return render_template('cart.html')
+```
 ```    
 @app.route('/customer_checkout')
 def customer_checkout():

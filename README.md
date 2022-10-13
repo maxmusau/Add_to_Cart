@@ -192,7 +192,7 @@ def add_product_to_cart():
             return redirect(url_for('.cart'))
         else:
             return 'Error while adding item to cart'
-``
+```
 
 # 3. STEP 3: create another route for the cart
 ```

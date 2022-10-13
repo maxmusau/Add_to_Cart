@@ -1,12 +1,12 @@
 # Add_to_Cart
 Cart shows the products selected for buyinh.
 
-#NOTE: the names used in this guideline are from a different database and table. change the names where necessary to fit your records. 
-for the records not included in your table, be sure to add them 
+# NOTE: the names used in this guideline are from a different database and table. change the names where necessary to fit your records. 
+## for the records not included in your table, be sure to add them 
 
-1. STEP 1: Create an HTML file called Catt.html and paste the following code
+# 1. STEP 1: Create an HTML file called Catt.html and paste the following code
 
-
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,11 +128,11 @@ for the records not included in your table, be sure to add them
 
 </body>
 </html>
+```
 
+# 2.STEP 2: inside app.py create a route for adding items to the cart ('/add') and pasete the following code
 
-2.STEP 2: inside app.py create a route for adding items to the cart ('/add') and pasete the following code
-
-
+```
 @app.route('/add', methods=['POST'])
 def add_product_to_cart():
         _quantity = int(request.form['quantity'])
@@ -192,22 +192,23 @@ def add_product_to_cart():
             return redirect(url_for('.cart'))
         else:
             return 'Error while adding item to cart'
+``
 
-3. STEP 3: create another route for the cart
-
+# 3. STEP 3: create another route for the cart
+```
 @app.route('/cart')
 def cart():
     return render_template('cart.html')
-
+```    
 @app.route('/customer_checkout')
 def customer_checkout():
     if check_customer():
             return redirect('/cart')
     else:
         return redirect('/customer_login')
-
-4. Create another route for empting the cart
-
+```
+# 4. Create another route for empting the cart
+```
 @app.route('/empty')
 def empty_cart():
     try:
@@ -221,9 +222,9 @@ def empty_cart():
 
     except Exception as e:
         print(e)
-
-5. STEP 5: Create a delete route for individual items in the cart
-
+```
+# 5. STEP 5: Create a delete route for individual items in the cart
+```
 @app.route('/delete/<string:code>')
 def delete_product(code):
     try:
@@ -251,10 +252,10 @@ def delete_product(code):
         return redirect(url_for('.cart'))
     except Exception as e:
         print(e)
-
+```
 
 #Function for merging arrays
-
+```
 def array_merge( first_array , second_array ):
      if isinstance( first_array , list) and isinstance( second_array , list ):
       return first_array + second_array
@@ -265,4 +266,4 @@ def array_merge( first_array , second_array ):
       return first_array.union( second_array )
      return False
 
-
+```

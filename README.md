@@ -300,7 +300,7 @@ def delete_product(code):
         print(e)
 ```
 
-#Function for merging arrays
+# Function for merging arrays
 we need to merge the arrays so that whenever a customer shops, the quantity,product_cost and total_price is updated
 ```
 def array_merge( first_array , second_array ):
@@ -314,7 +314,7 @@ def array_merge( first_array , second_array ):
      return False
 
 ```
-#another function for customer_check
+# another function for customer_check
 ```
 def check_customer():
     if 'email' in session:
@@ -322,7 +322,7 @@ def check_customer():
     else:
         return False
  ```
-#optional: checkout route
+
 create a python file order_gen.py and paste the following function
 ```
 import random
@@ -330,10 +330,11 @@ import string
 def random_string_generator(size=10, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 ```
-##create the checkout route 
+# optional
+## create the checkout route 
 ```
 from  order_gen import random_string_generator
-#checkout route
+# checkout route
 @app.route('/proceed_checkout', methods = ['POST','GET'])
 def proceed_checkout():
     if check_customer():

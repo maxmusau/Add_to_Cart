@@ -1,8 +1,27 @@
 # Add_to_Cart
 Cart shows the products selected for buying.
 
-# NOTE: ## the names used in this guideline are from a different database and table. change the names where necessary to fit your records. 
+# NOTE: 
+## the names used in this guideline are from a different database and table. change the names where necessary to fit your records. 
 ## add the the columns not included in your table
+this is the sql used to create the table
+```
+CREATE TABLE `products` (
+  `product_id` int(50) NOT NULL,
+  `product_name` varchar(200) NOT NULL,
+  `product_desc` varchar(500) NOT NULL,
+  `product_cost` int(11) NOT NULL,
+  `product_discount` varchar(50) NOT NULL,
+  `product_category` varchar(50) NOT NULL,
+  `product_brand` varchar(50) NOT NULL,
+  `image_url` varchar(500) NOT NULL,
+  `color` text NOT NULL,
+  `top_brand` text NOT NULL DEFAULT 'No',
+  `top_deal` text NOT NULL DEFAULT 'No',
+  `date_added` timestamp NOT NULL DEFAULT current_timestamp()
+)
+```
+
 
 # 1. STEP 1: Create an HTML file called cart.html and paste the following code
 

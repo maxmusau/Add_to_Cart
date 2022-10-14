@@ -144,7 +144,7 @@ CREATE TABLE `products` (
 </body>
 </html>
 ```
-#STEP2: paste the following form in your single.html
+# STEP2: paste the following form in your single.html
 ```
 <legend>
                      
